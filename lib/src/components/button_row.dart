@@ -18,22 +18,58 @@ class ButtonRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Expanded(
-          child: TextButton(
-            onPressed: onCancelPressed,
-            child: Text(
-              localizations.cancelButtonLabel,
+          child: Container(
+            padding: EdgeInsets.all(18),
+            child: OutlinedButton(
+              style: OutlinedButton.styleFrom(
+                elevation: 0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              onPressed: onCancelPressed,
+              child: RichText(
+                text: const TextSpan(
+                  text: "CANCEL",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 11,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 0.55,
+                  ),
+                ),
+              ),
             ),
           ),
         ),
         const SizedBox(
           height: 20,
-          child: VerticalDivider(),
         ),
         Expanded(
-          child: TextButton(
-            onPressed: onSavePressed,
-            child: Text(
-              localizations.okButtonLabel,
+          child: Container(
+            padding: EdgeInsets.all(18),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFFFAA47),
+                elevation: 0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              onPressed: onSavePressed,
+              child: RichText(
+                text: const TextSpan(
+                  text: "CONFIRM",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 11,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 0.55,
+                  ),
+                ),
+              ),
             ),
           ),
         ),

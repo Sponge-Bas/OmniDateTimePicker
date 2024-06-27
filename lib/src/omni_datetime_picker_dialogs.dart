@@ -34,6 +34,7 @@ Future<DateTime?> showOmniDateTimePicker({
   EdgeInsets? insetPadding,
   BoxConstraints? constraints,
   ThemeData? theme,
+  bool? horizontalLayout,
 }) {
   return showGeneralDialog(
     context: context,
@@ -119,6 +120,7 @@ Future<List<DateTime>?> showOmniDateTimeRangePicker({
   EdgeInsets? insetPadding,
   ThemeData? theme,
   BoxConstraints? constraints,
+  bool? horizontalLayout,
 }) {
   return showGeneralDialog(
     context: context,
@@ -168,6 +170,7 @@ Future<List<DateTime>?> showOmniDateTimeRangePicker({
           defaultTab: defaultTab,
           startSelectableDayPredicate: startSelectableDayPredicate,
           endSelectableDayPredicate: endSelectableDayPredicate,
+          horizontalLayout: horizontalLayout,
         ),
       );
     },

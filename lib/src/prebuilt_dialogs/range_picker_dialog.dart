@@ -44,6 +44,7 @@ class RangePickerDialog extends StatefulWidget {
   final bool isForceEndDateAfterStartDate;
   final void Function()? onStartDateAfterEndDateError;
   final DefaultTab? defaultTab;
+  final bool? horizontalLayout;
 
   const RangePickerDialog({
     super.key,
@@ -77,6 +78,7 @@ class RangePickerDialog extends StatefulWidget {
     bool? isForceEndDateAfterStartDate,
     this.onStartDateAfterEndDateError,
     this.defaultTab,
+    this.horizontalLayout,
   }) : isForceEndDateAfterStartDate = isForceEndDateAfterStartDate ?? false;
 
   @override
@@ -172,6 +174,7 @@ class _RangePickerDialogState extends State<RangePickerDialog>
                         const CupertinoPickerDefaultSelectionOverlay(),
                     separator: widget.separator,
                     type: widget.type ?? OmniDateTimePickerType.dateAndTime,
+                    horizontalLayout: widget.horizontalLayout ?? false,
                   ),
                   // End
                   OmniDateTimePicker(
@@ -195,6 +198,7 @@ class _RangePickerDialogState extends State<RangePickerDialog>
                         const CupertinoPickerDefaultSelectionOverlay(),
                     separator: widget.separator,
                     type: widget.type ?? OmniDateTimePickerType.dateAndTime,
+                    horizontalLayout: widget.horizontalLayout ?? false,
                   ),
                 ],
               ),
